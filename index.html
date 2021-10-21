@@ -8,6 +8,8 @@
         Language - Linguagem e regras
 
     CSS Cascading Style Sheets
+
+    #ImaginarConstruirTransformar
 -->
 
 <!DOCTYPE html>
@@ -31,7 +33,7 @@
                     <!--Lorem Pixel ajuda-->
                     <img src="images/foto_perfil.JPG" alt="Foto de perfil">
                 </div>
-                <h1>João Stephan</h1>
+                <h1 id="user_name">João Stephan</h1>
                 <a href="https://github.com/stephanJoao" target="_blank"> 
                     <img src="images/github.svg" alt="Ícone GitHub">
                     stephanJoao 
@@ -39,29 +41,53 @@
                 <p>
                     Texto sobre mim
                 </p>
-                <ul>
-                    <li>
-                        <a href="https://www.instagram.com/stephan_joao/" target="_blank">
+                <ul id="social_media_links">
+                    <li class="instagram">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">
                             <img src="images/instagram.svg" alt="Ícone Instagram">
                         </a>
                     </li>
-                    <li>
-                        <a href="https://twitter.com/stephan_joao" target="_blank">
+                    <li class="twitter">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">
                             <img src="images/twitter.svg" alt="Ícone Twitter">
                         </a>
                     </li>
-                    <li>
-                        <a href="https://www.facebook.com/joao.stephansilvamauricio" target="_blank">
+                    <li class="facebook">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">
                             <img src="images/facebook.svg" alt="Ícone Facebook">
                         </a>
                     </li>
-                    <li>
-                        <a href="https://www.youtube.com/channel/UC7aIhk8wTspxXraUwhaTTkA" target="_blank">
+                    <li class="youtube">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">
                             <img src="images/youtube.svg" alt="Ícone Youtube">
                         </a>
                     </li>                
                 </ul>
             </div>
         </main>
+        <script>
+
+            const social_media = {
+                github: "stephanJoao",
+                instagram: "stephan_joao",
+                twitter: "stephan_joao",
+                facebook: "joao.stephansilvamauricio",
+                youtube: "channel/UC7aIhk8wTspxXraUwhaTTkA"
+            }             
+
+            function change_social_media() {
+                for(let li of social_media_links.children) {
+                    const social = li.getAttribute("class");
+                    // Works, but there is a cooler way of doing that
+                    //li.children[0].href = "https://www." + social + ".com/channel/UC7aIhk8wTspxXraUwhaTTkA";
+
+                    // THAT'S A IMPORTANT PIECE OF CODE!!!!
+                    li.children[0].href = `https://www.${social}.com/${social_media[social]}`;  
+                }
+            }
+
+            change_social_media();
+
+        </script>
     </body>
 </html>
