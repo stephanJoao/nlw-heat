@@ -4,15 +4,16 @@
 
 html,
 body {
-  --gray: #E1E1E6;
+  --gray: #e1e1e6;
   --black: #202024;
-  
+
   height: 100%;
-  font-family: "Roboto", sans-serif;  
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 body {
+  width: 100%;
   display: grid;
   place-items: center;
 }
@@ -28,13 +29,13 @@ main {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  
+
   color: var(--gray);
 }
 
 .avatar {
   width: 10rem;
-  margin: 11.5rem auto 0; 
+  margin: 11.5rem auto 0;
   /* It's the reference for absolute in "avatar span" */
   position: relative;
 }
@@ -75,7 +76,7 @@ p {
   margin-top: 2rem;
 }
 
-ul { 
+ul {
   list-style: none;
   padding: 0;
 
