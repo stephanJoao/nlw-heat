@@ -41,6 +41,7 @@ function get_github_infos() {
         // can be: user_login.textContent = data.login; 
         user_url.children[1].textContent = data.login;
         user_bio.textContent = data.bio;
+        user_avatar.src = data.avatar_url;
     });
     
 
