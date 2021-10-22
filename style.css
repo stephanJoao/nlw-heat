@@ -19,28 +19,18 @@ body {
 }
 
 main {
+  background-image: url(images/background.svg);
   width: 375px;
   height: 812px;
-  z-index: 13;
-
-  position: relative;
 }
 
 .container {
-  position: inherit;
-  z-index: 1;
-
   max-width: 250px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 
   color: var(--gray);
-}
-
-#background {
-  position: absolute;
-  z-index: 0;
 }
 
 .avatar {
