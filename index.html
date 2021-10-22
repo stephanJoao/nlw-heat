@@ -9,7 +9,7 @@
 
     CSS Cascading Style Sheets
 
-    #ImaginarConstruirTransformar
+    #SemLimites
 -->
 
 <!DOCTYPE html>
@@ -36,12 +36,12 @@
                     <!--Lorem Pixel ajuda-->
                     <img src="images/foto_perfil.JPG" alt="Foto de perfil">
                 </div>
-                <h1 id="user_name">João Stephan</h1>
-                <a href="https://github.com/stephanJoao" target="_blank"> 
+                <h1 id="user_name">Irmão do Jorel</h1>
+                <a id="user_url" href="https://github.com/gilgamesh" target="_blank"> 
                     <img src="images/github.svg" alt="Ícone GitHub">
-                    stephanJoao 
+                    <span id="user_login">irmaoDoJorel</span> 
                 </a>
-                <p>
+                <p id="user_bio">
                     Estudante de Engenharia Computacional (UFJF) com bastante energia para aprender coisas novas.
                 </p>
                 <ul id="social_media_links">
@@ -68,29 +68,6 @@
                 </ul>
             </div>
         </main>
-        <script>
-
-            const social_media = {
-                github:    "stephanJoao",
-                instagram: "stephan_joao",
-                twitter:   "stephan_joao",
-                facebook:  "joao.stephansilvamauricio",
-                youtube:   "channel/UC7aIhk8wTspxXraUwhaTTkA"
-            }             
-
-            function change_social_media() {
-                for(let li of social_media_links.children) {
-                    const social = li.getAttribute("class");
-                    // Works, but there is a cooler way of doing that
-                    //li.children[0].href = "https://www." + social + ".com/channel/UC7aIhk8wTspxXraUwhaTTkA";
-
-                    // THAT'S A IMPORTANT PIECE OF CODE!!!!
-                    li.children[0].href = `https://www.${social}.com/${social_media[social]}`;  
-                }
-            }
-
-            change_social_media();
-
-        </script>
+        <script src="main.js"></script>
     </body>
 </html>
