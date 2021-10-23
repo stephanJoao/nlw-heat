@@ -90,3 +90,22 @@ ul {
 
   margin-top: 4rem;
 }
+
+@keyframes button_highlight {
+  from {
+    transform: translateX(0%) translateY(0%);
+  }
+  to {
+    transform: translateX(-7%) translateY(-7%);
+  }
+}
+
+li > a > img {
+  box-shadow: 1px 1px 2px var(--gray);
+  /* clip-path: inset(0px -5px -5px 0px); */
+}
+
+li > a > img:active {
+  box-shadow: 2px 2px 7px var(--gray);
+  animation: button_highlight 0.1s forwards;
+}
