@@ -92,20 +92,23 @@ ul {
 }
 
 @keyframes button_highlight {
-  from {
+  0% {
     transform: translateX(0%) translateY(0%);
+    box-shadow: 1px 1px 1px var(--gray);
   }
-  to {
+  50% {
+    box-shadow: 7px 7px 15px var(--gray);
+  }
+  100% {
     transform: translateX(-7%) translateY(-7%);
+    box-shadow: 1px 1px 15px var(--gray);
   }
 }
 
-li > a > img {
-  box-shadow: 1px 1px 2px var(--gray);
-  /* clip-path: inset(0px -5px -5px 0px); */
-}
+/* li > a > img {
+  clip-path: inset(0px -5px -5px 0px);
+} */
 
-li > a > img:active {
-  box-shadow: 2px 2px 7px var(--gray);
-  animation: button_highlight 0.1s forwards;
+li > a > img:hover {
+  animation: button_highlight 0.2s forwards;
 }
